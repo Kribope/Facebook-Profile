@@ -312,6 +312,18 @@ nav > a:hover{
 .status > button:hover{
     background-color: #929191;
 }
+.achievement > img{
+    cursor: pointer;
+}
+.achievement > h4 > .school{
+    cursor: pointer;
+}
+.achievement > h4 > .school:hover{
+    text-decoration-line: underline;
+}
+.achievement > h4 > .profs:hover{
+    text-decoration-line: underline;
+}
 .achievement > .warning {
     position: absolute;
     top: 112%;
