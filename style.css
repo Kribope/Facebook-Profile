@@ -15,8 +15,45 @@ nav {
     position: fixed;
     z-index: 100;
 }
-.leftside{
+.navright {
     display: flex;
+    align-items: center;
+}
+nav > a:hover{
+    background-color: rgb(103, 104, 107);
+}
+.leftside {
+    display: flex;
+    align-items: center;
+}
+
+.leftside a {
+    margin-right: 10px;
+    display: inline-block;
+    width: 36px; /* Adjust the width and height to fit the circle */
+    height: 36px;
+    border-radius: 50%; /* Ensure the circle shape */
+}
+.leftside a img {
+    padding: 7px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: rgb(58, 57, 57);
+}
+.leftside a img:hover{
+    background-color: #747373;
+} 
+.leftinside a {
+    border: 0px;
+    padding: 0px;
+    width: 36px;
+    height: 36px;
+}
+.leftinside a img {
+    padding: 0px;
+    border-radius: none;
 }
 .profile img {
     border-radius: 50%;
@@ -24,32 +61,39 @@ nav {
 .navright > * {
     margin-right: 10px;
 }
-.search input[type="text"] {    
+.navright form .search-input {
     border: none;
     padding: 10px;
     border-radius: 50px;
     font-size: 1em;
-    width: 100%;
-    background-color: rgb(228, 230, 235);
-}
-.search-input {
+    width: 120%;
+    background-color: rgb(61, 63, 65);
     padding-left: 30px;
     background-image: url('images/search.png');
     background-size: 20px;
     background-repeat: no-repeat;
-    background-position: 5px center;
+    background-position: 10px center;
 }
-.search-input:focus {
-    background-image: none;
+.navright form .search-input:focus {
+    background-image: url('images/arrow.png');
+    color: #ffffff;
+    text-indent: 2%;
 }
-.search-input:focus::placeholder {
+
+.navright form .search-input:focus::placeholder {
     color: transparent;
+}
+.navright form .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1em;
+    text-indent: 2%;
 }
 .backgroundpicture{
     margin: 0 auto;
     height: 450px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
     width: 80%;
-    background-color: rgb(30, 31, 32);
+    background-color: rgb(21, 21, 22);
 }
 .heads > button{
     height: 40px;
@@ -79,6 +123,8 @@ nav {
     left: 15%;
     top: 51%;
     border-radius: 50%;
+    background-color: rgb(36, 37, 38);
+    padding: 4px;
     cursor: pointer;
 }
 .heads > h1{
@@ -111,16 +157,17 @@ nav {
     left: 39.5%;
 }
 .btns > button{
-    background-color: rgb(8, 102, 255);
+    background-color: #0051ff;
     border: none;
     font-size: 1em;
     color: #ffffff;
     height: 40px;
     width: 75px;
-    text-indent: 10%;
+    text-indent: 15%;
     background-image: url('images/edit.png');
     background-repeat: no-repeat;
-    background-position: center left;
+    background-position-y: 50%;
+    background-position-x: 3%;
     position: absolute;
     top: 71%;
     left: 64%;
@@ -128,20 +175,34 @@ nav {
     border-radius: 5px;
     font-weight: 500;
 }
+.btns button:hover{
+    background-color:rgb(8, 102, 255);
+}
+.btns button:nth-child(2):hover{
+    background-color:#555454;
+}
+.btns button:nth-child(3):hover{
+    background-color:#555454;
+}
+.btns button:nth-child(4):hover{
+    background-color:#555454;
+}
 .btns > button:nth-child(2){
     width: 8%;
     background-color: #424242;
     left: 69%;
+    background-position-y: 50%;
+    background-position-x: 6%;
     background-image: url('images/tools.png');
     background-repeat: no-repeat;
-    background-position: center left;
 }
 .btns > button:nth-child(3){
     width: 7%;
     left: 77.3%;
     background-color: #424242;
     background-repeat: no-repeat;
-    background-position: center left;
+    background-position-y: 50%;
+    background-position-x: 3%;
     background-image: url('images/megaphone.png');
     text-indent: 15%;
 }
@@ -208,9 +269,10 @@ nav {
 .anotherbackgroundmain{
     position: absolute;
     top: 90%;
-    height: 1300px;
+    height: 3000px;
+    box-shadow: 0 1px 8px rgba(34, 33, 33, 0.45);
     width: 100%;
-    background-color: rgb(30, 31, 32);
+    background-color: rgb(21, 21, 22);
 }
 .intro > main{
     position: absolute;
@@ -246,6 +308,9 @@ nav {
     font-size: 1em;
     font-weight: 500;
     width: 23%;
+}
+.status > button:hover{
+    background-color: #929191;
 }
 .achievement > .warning {
     position: absolute;
@@ -315,6 +380,60 @@ nav {
     font-size: 1em;
     font-weight: 500;
     width: 23%;
+}
+.featured > button:hover {
+    background-color: #929191;
+}
+.photo main {
+    position: absolute;
+    top: 178%;
+    left: 15%;
+    height: 520px;
+    width: 380px;
+    background-color: rgb(36, 37, 38);
+    border-radius: 10px;
+}
+.photo > h2{
+    position: absolute;
+    top: 180%;
+    left: 16%;
+    color: #ffffff;
+}
+.photo > button {
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    width: 8%;
+    height: 30px;
+    border-radius: 5px;
+    top: 180%;
+    left: 30%;
+    color: rgb(90, 167, 255);
+    font-size: 1.1em;
+}
+.photo > button:hover{
+    background-color: #464646;
+}
+.photo > img {
+    cursor: pointer;
+}
+.photo .photo1{
+    border-radius: 10px 0;
+    position: absolute;
+    top: 186%;
+    left: 16%;
+}
+.photo .photo2{
+    border-radius: 0 10px;
+    position: absolute;
+    top: 186%;
+    left: 27%;
+}
+.photo .photo3{
+    border-radius: 0 0 10px 10px;
+    position: absolute;
+    top: 208.5%;
+    left: 16%;
 }
 .post > .postbackground{
     position: absolute;
@@ -523,12 +642,14 @@ nav {
     border-radius: 50px;
 }
 .insidepost1 > .name{
+    cursor: pointer;
     color: #ffffff;
     position: absolute;
     top: 143%;
     left: 44.3%;
 }
 .insidepost1 > .time {
+    cursor: pointer;
     position: absolute;
     top: 146%;
     left: 44.3%;
@@ -539,24 +660,28 @@ nav {
     background-position: center right;
 }
 .insidepost1 > .picpost1 {
+    cursor: pointer;
     position: absolute;
     top: 151%;
     left: 42.5%;
     border-radius: 10px;
 }
 .insidepost1 > .account{
+    cursor: pointer;
     border-radius: 50px;
     position: absolute;
     top: 223%;
     left: 42.5%;
 }
 .insidepost1 > .namepost{
+    cursor: pointer;
     color: #ffffff;
     position: absolute;
     top: 223%;
     left: 46%;
 }
 .insidepost1 > .timepost {
+    cursor: pointer;
     position: absolute;
     top: 226.5%;
     left: 46%;
